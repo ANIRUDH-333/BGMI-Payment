@@ -7,40 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BGMI Registration with Payment</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Ensure the payment button is hidden initially */
-        #razorpay-payment-button {
-            display: none !important;
-        }
-    </style>
 </head>
 
 <body>
 
     <div class="container">
         <h2>PowerPlay BGMI Registration</h2>
-        <h4>Please fill all the fields to see the payment button automatically</h4>
-        <form id="registration-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <h4>Please do the payment to fill the details</h4>
+        <form id="payment-form">
+            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PCXZCVGRSIOD60"
+                async> </script>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone (Get your prize on this number):</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="bgmi-name">BGMI Name:</label>
-            <input type="text" id="bgmi-name" name="bgmi-name" required>
-
-            <!-- Razorpay Payment Button Script -->
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" 
-                    data-payment_button_id="pl_PCXZCVGRSIOD60" 
-                    async></script>
         </form>
     </div>
-
-    <script src="scripts.js"></script>
 
 </body>
 
