@@ -1,49 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('PowerPlayBGMI-logo.jpeg') no-repeat center center fixed; /* Add the BGMI-related background image */
-    background-size: cover; /* Ensures the background covers the entire page */
-    height: 100vh; /* Ensures the body takes full height of the viewport */
+    background: url('PowerPlayBGMI-logo.jpeg') no-repeat center center fixed; 
+    background-size: cover; 
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .container {
     max-width: 900px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a white background with opacity to make text readable */
-    padding: 90px 20px 20px; /* 40px top, 20px right and left, 20px bottom */
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 300px 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-@media (max-width: 600px) {
-    .container {
-        max-width: 100%; /* Use full width on mobile */
-        padding: 400px 20px 20px; /* Adjust padding for mobile */
-    }
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    border-radius: 15px;
+    z-index: -1; /* Place behind the container */
 }
 
-h2, h4 {
-    color: #333;
+h2 {
+    color: #ffffff; /* Light white for the main title */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
+h3 {
+    color: #ffffff; /* Light gray for subheadings */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #ffffff; /* Slightly darker gray for smaller headings */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0; /* Space between list items */
+}
+
+a {
+    color: #b3b3b3; /* Match link color to h4 color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff; /* Change link color on hover to light white */
+}
+
+.social-links {
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 15px; /* Space between social links */
+}
+
+.payment-section {
+    margin-top: 30px;
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 2px solid #666666; /* Dark gray for input borders */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #ffffff; /* Change border color on focus to white */
 }
 
 .submit-container {
     text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 600px 20px 10px; /* Adjust padding for smaller screens */
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1.2em;
+    }
 }
