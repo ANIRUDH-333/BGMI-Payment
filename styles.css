@@ -1,20 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 50px;
+    margin: 0;
+    padding: 0;
+    background: url('PowerPlayBGMI-logo.jpeg') no-repeat center center fixed; /* Add the BGMI-related background image */
+    background-size: cover; /* Ensures the background covers the entire page */
+    height: 100vh; /* Ensures the body takes full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     max-width: 400px;
-    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a white background with opacity to make text readable */
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2, h4 {
+    color: #333;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
+    color: #333;
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
