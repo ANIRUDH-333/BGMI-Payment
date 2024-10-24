@@ -11,12 +11,19 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 900px;
     background-color: rgba(255, 255, 255, 0.8); /* Add a white background with opacity to make text readable */
-    padding: 20px;
+    padding: 90px 20px 20px; /* 40px top, 20px right and left, 20px bottom */
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Use full width on mobile */
+        padding: 400px 20px 20px; /* Adjust padding for mobile */
+    }
 }
 
 h2, h4 {
