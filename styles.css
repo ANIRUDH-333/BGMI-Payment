@@ -2,8 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('PowerPlayBGMI-logo.jpeg') no-repeat center center fixed; 
-    background-size: cover; 
+    background: url('banner-bgmi.jpg') no-repeat center center fixed; 
+    background-size: 1000px; 
     height: 100vh; 
     display: flex;
     align-items: center;
